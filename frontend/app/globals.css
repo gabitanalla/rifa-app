@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-railway-sans);
+  --font-mono: var(--font-railway-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ededed;
+    --foreground: #0a0a0a;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+body.hero {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-image: url("./../public/fondo.svg");
+}
+
+div.main-div {
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  body.hero {
+    background-image: url("./../public/findo-cel.svg");
+  }
+  div.main-div {
+    margin-top: 250px;
+  }
+}
+
+div.form-group {
+  flex-direction: column;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+textarea.form-textarea {
+  width: 100%;
+  height: 150px;
+  border: 2px solid;
+  border-color: #2F9182;
+  border-radius: 5px;
+}
+
+button.submit-button {
+  border: 1px solid;
+  border-radius: 5px;
+  background: #F3B83A;
+  border-color: #F3B83A;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+input.winners-input {
+  border: 2px solid;
+  border-color: #2F9182;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+div.center-div {
+  margin-top: 120px;
+  font-size: 20px;
+}
+
+div.winners-box {
+  font-size: 35px;
+  align-content: center;
+  text-align: center;
+  color: #2F9182;
+}
