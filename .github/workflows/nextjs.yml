@@ -75,6 +75,9 @@ jobs:
         run: cd frontend/ && ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
         run: cd frontend/ && ${{ steps.detect-package-manager.outputs.runner }} next build
+      - name: Export static HTML
+        # Add this step so the static 'out' directory is produced
+        run: cd frontend/ && ${{ steps.detect-package-manager.outputs.runner }} next export -o out
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
