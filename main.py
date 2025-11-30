@@ -9,10 +9,10 @@ from pydantic import BaseModel
 
 app = FastAPI()
 
-fe_host = os.getenv("FE_HOST", "http://localhost")
+fe_host = os.getenv("FE_HOST", "http://localhost:3000")
 
 origins = [
-    f"{fe_host}:3000",  # Frontend
+    f"{fe_host}",  # Frontend
     "http://127.0.0.1:3000",  # Sometimes you may use 127.0.0.1 instead of localhost
 ]
 

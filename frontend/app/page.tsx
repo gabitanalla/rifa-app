@@ -16,9 +16,8 @@ export default function Home() {
 
   async function handleSubmit(event: React.FormEvent) {
     event.preventDefault(); // Prevents default form submission
-    const beUrl = process.env.HOST || "http://localhost";
-    console.log("Backend URL:", beUrl);
-    const response = await fetch( beUrl + ":8080/test/", {
+    const beUrl = process.env.HOST || "http://localhost:8080";
+    const response = await fetch( beUrl + "/test/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
