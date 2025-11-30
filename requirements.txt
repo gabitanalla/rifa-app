@@ -1,4 +1,3 @@
 fastapi
 uvicorn[standard]
 pydantic
-git+https://github.com/gabitanalla/rifa-app.git
