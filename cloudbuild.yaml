@@ -1,0 +1,17 @@
+steps:
+  # 1. Install dependencies
+  - name: python:3.11
+    entrypoint: pip
+    args: ["install", "-r", "requirements.txt"]
+
+  # 3. Deploy the code to Cloud Run using Cloud Buildpacks
+  - name: gcr.io/google.com/cloudsdktool/cloud-sdk
+    entrypoint: gcloud
+    args:
+      - run
+      - deploy
+      - fastapi-backend
+      - --source=.
+      - --platform=managed
+      - --region=us-central1
+      - --allow-unauthenticated
