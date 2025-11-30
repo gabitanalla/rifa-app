@@ -16,7 +16,7 @@ export default function Home() {
 
   async function handleSubmit(event: React.FormEvent) {
     event.preventDefault(); // Prevents default form submission
-    const beUrl = process.env.HOST || "http://localhost:8080";
+    const beUrl = process.env.NEXT_PUBLIC_HOST || "http://localhost:8080";
     const response = await fetch( beUrl + "/test/", {
       method: "POST",
       headers: {
