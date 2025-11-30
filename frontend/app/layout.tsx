@@ -23,6 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
+      <head>
+        <link rel="stylesheet" href="/global.css">
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased hero`}
       >
