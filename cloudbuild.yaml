@@ -13,8 +13,4 @@ steps:
     args:
       - run
       - deploy
-      - fastapi-backend
       - --source=.
-      - --platform=managed
-      - --region=us-central1
-      - --allow-unauthenticated
