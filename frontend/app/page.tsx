@@ -28,6 +28,7 @@ export default function Home() {
       }),
     });
     const data = await response.json();
+    alert(data)
     setResponseData(data);
   }
   return (
