@@ -23,12 +23,12 @@ export default function Home() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        participants: participants,
+        participant: participants,
         prices: prices,
       }),
-    });
-    const data = await response.json();
-    setResponseData(data);
+    }).then(response => response.json())
+    .then(data => setResponseData(data))
+    .catch((error) => console.error('Error2:', error));;
   }
   return (
     <div
