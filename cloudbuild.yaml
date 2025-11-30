@@ -16,5 +16,5 @@ steps:
       - fastapi-backend
       - --source=.
       - --platform=managed
-      - --region=global
+      - --region=europe-west1
       - --allow-unauthenticated
